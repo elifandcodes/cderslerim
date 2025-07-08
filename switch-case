@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+
+int main() {
+	float num1, num2;
+	char op;
+	printf("Please enter a operator(+, -, *, /): \n");
+	scanf_s("%c", &op, 1); // the 1 is the size of the buffer for op
+
+	printf("Please enter two numbers: \n");
+	scanf_s("%f %f", &num1, &num2);
+
+	switch (op) {
+	case '+':
+		printf("Result: %.2f\n", num1+num2); 
+		break;
+
+	case '-':
+		printf("Result: %.2f\n", num1 - num2);
+		break;
+
+	case '*':
+		printf("Result: %.2f\n", num1 * num2);
+		break;
+
+	case '/':
+		printf("Result: %.2f\n", num1 / num2);
+		break;
+	default: printf("Wrong entry!");
+	}
+
+	return 0;
+}
